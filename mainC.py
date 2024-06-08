@@ -130,7 +130,7 @@ def Do_Backward_Selection():
             print(f"{current_best_accuracy:.1%}\n")
 
 # Load data into matrix
-data = np.loadtxt("small-test-dataset.txt")
+data = np.loadtxt("large-test-dataset.txt")
 
 print('Welcome to Ryan Noghani\'s Feature Selection Algorithm.\n')
 print("Please enter total number of features: ", end='')
