@@ -99,7 +99,11 @@ def Do_Backward_Selection():
             print(f"{current_best_accuracy:.1%}\n")
 
 
-data = np.loadtxt("small-test-dataset.txt") #Load data into matrix
+#data = np.loadtxt("small-test-dataset.txt") #Load data into matrix
+#data = np.loadtxt("large-test-dataset.txt") #Load data into matrix
+data = np.loadtxt("CS170_Spring_2024_Small_data__31.txt") #Load data into matrix
+#data = np.loadtxt("CS170_Spring_2024_Large_data__31.txt") #Load data into matrix
+
 print('Welcome to Ryan Noghani\'s Feature Selection Algorithm.\n')
 print("Please enter total number of features: ", end='')
 number_of_features = int(input())
@@ -109,6 +113,9 @@ print('\tBackward Elimination')
 print('\tBertie\'s Special Algorithm\n')
 choice = input()
 
+num_instances,num_colums  = data.shape
+num_features = num_colums -1
+print(f"This dataset has {num_features} features (not including the class attribute), with {num_instances} instances.")
 if choice == '1':
     Do_Forward_Selection()
 
