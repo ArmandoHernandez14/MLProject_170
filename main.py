@@ -7,6 +7,7 @@ def Nearest_Neighbor(trainX, trainY, testX, testY):
 
 def Evaluation_Function(x):
 
+
     if len(x) == 0:
         column = data[:,0]
         return max(np.sum(column == 1), np.sum(column == 2))/len(column)
@@ -102,7 +103,10 @@ def Do_Backward_Selection():
 #data = np.loadtxt("small-test-dataset.txt") #Load data into matrix
 #data = np.loadtxt("large-test-dataset.txt") #Load data into matrix
 #data = np.loadtxt("CS170_Spring_2024_Small_data__31.txt") #Load data into matrix
-data = np.loadtxt("CS170_Spring_2024_Large_data__31.txt") #Load data into matrix
+#data = np.loadtxt("CS170_Spring_2024_Large_data__31.txt") #Load data into matrix
+
+
+# to use the data set, uncomment the one that you want to use. 
 
 print('Welcome to Ryan Noghani\'s Feature Selection Algorithm.\n')
 print("Please enter total number of features: ", end='')
@@ -123,4 +127,4 @@ elif choice == '2':
     Do_Backward_Selection()
 
 else:
-    print(Evaluation_Function(set({1,15,27})))
+    print(Evaluation_Function(set({1,15,27})))      
