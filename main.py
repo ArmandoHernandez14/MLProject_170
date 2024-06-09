@@ -101,8 +101,8 @@ def Do_Backward_Selection():
 
 #data = np.loadtxt("small-test-dataset.txt") #Load data into matrix
 #data = np.loadtxt("large-test-dataset.txt") #Load data into matrix
-data = np.loadtxt("CS170_Spring_2024_Small_data__31.txt") #Load data into matrix
-#data = np.loadtxt("CS170_Spring_2024_Large_data__31.txt") #Load data into matrix
+#data = np.loadtxt("CS170_Spring_2024_Small_data__31.txt") #Load data into matrix
+data = np.loadtxt("CS170_Spring_2024_Large_data__31.txt") #Load data into matrix
 
 print('Welcome to Ryan Noghani\'s Feature Selection Algorithm.\n')
 print("Please enter total number of features: ", end='')
