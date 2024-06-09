@@ -116,9 +116,9 @@ def Do_Backward_Selection():
             print(f"{current_best_accuracy:.1%}\n")
 
 #data = np.loadtxt("small-test-dataset.txt") #Load data into matrix
-#data = np.loadtxt("large-test-dataset.txt") #Load data into matrix
+data = np.loadtxt("large-test-dataset.txt") #Load data into matrix
 #data = np.loadtxt("CS170_Spring_2024_Small_data__31.txt") #Load data into matrix
-data = np.loadtxt("CS170_Spring_2024_Large_data__31.txt") #Load data into matrix
+#data = np.loadtxt("CS170_Spring_2024_Large_data__31.txt") #Load data into matrix
 
 # to use the data set, uncomment the one that you want to use. 
 
