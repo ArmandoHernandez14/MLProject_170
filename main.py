@@ -1,5 +1,5 @@
 import numpy as np
-
+from itertools import chain, combinations
 def Nearest_Neighbor(trainX, trainY, testX, testY):
     m,n = trainX.shape
     nearest_neighbor_index = (np.square(trainX - (np.ones((m, 1)) @ testX)).sum(axis=1)).argmin()
