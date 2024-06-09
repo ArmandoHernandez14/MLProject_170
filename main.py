@@ -113,7 +113,7 @@ number_of_features = int(input())
 print('\nType the number of the algorithm you want to run.\n\n')
 print('\tForward Selection')
 print('\tBackward Elimination')
-print('\tBertie\'s Special Algorithm\n')
+print('\tGroup31\'s Special Algorithm\n')
 choice = input()
 
 num_instances,num_colums  = data.shape
@@ -125,5 +125,15 @@ if choice == '1':
 elif choice == '2':
     Do_Backward_Selection()
 
-else:
-    print(Evaluation_Function(set({1,15,27})))      
+else:   #Custom Algorithm: checks every single possible combinations. Takes very long to execute for large number of features (usually 10 or more features).33
+    features_being_used = set(range(1,number_of_features+1))
+    x = set(chain.from_iterable(combinations(features_being_used, r) for r in range(len(features_being_used)+1)))
+    max_accuracy = 0.0
+    best_set = set({})
+    for i in x:
+        candidate = Evaluation_Function(set(i))
+        if (candidate > max_accuracy):
+            max_accuracy = candidate
+            best_set = i
+    print('Finished search!! The best feature subset is', best_set, 'which has an accuracy of ', end='')
+    print(f"{max_accuracy:.1%}\n")
